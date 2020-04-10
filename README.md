@@ -33,4 +33,4 @@ Finally, this repository was created by an aspiring data analyst for the enjoyme
 * Eduardo Solano
 
 ## Acknowledgements
-* Nassim Taba for teaching me how to use Python!!
+* Nasim Taba for teaching me how to use Python!!
