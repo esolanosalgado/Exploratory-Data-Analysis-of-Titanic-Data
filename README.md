@@ -21,6 +21,11 @@ result
 ```
 In the result directory, you will find all of the graphs produced by the jupyter notebook files (in .png format) as well as the final analysis report (.pdf format).
 
+```
+doc
+```
+In the doc directory, you will find the R markdown files used to create the analysis report if you want to recreate the report and export it to either html or word document.
+
 ## Having Fun With Data Analytics!!
 Finally, this repository was created by an aspiring data analyst for the enjoyment of others interested in data science. 
 
