@@ -6,16 +6,19 @@ This repository contains all of the information used to perform an exploratory d
 
 In this repository you will find the titanic.csv dataset file used for my analysis, as well as the jupyter notebook files with the code used to perform the analyses.
 
----
+```
 src
----
-
+```
 In the src directory you will find the 2 jupyter notebook files with the codes used to perform the analyses.
 
-## data
+```
+data
+```
 In the data directory, you will find the raw .csv dataset file used for the analyses.
 
-## result
+```
+result
+```
 In the result directory, you will find all of the graphs produced by the jupyter notebook files (in .png format) as well as the final analysis report (.pdf format).
 
 ## Having Fun With Data Analytics!!
