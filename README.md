@@ -6,7 +6,10 @@ This repository contains all of the information used to perform an exploratory d
 
 In this repository you will find the titanic.csv dataset file used for my analysis, as well as the jupyter notebook files with the code used to perform the analyses.
 
-## src
+---
+src
+---
+
 In the src directory you will find the 2 jupyter notebook files with the codes used to perform the analyses.
 
 ## data
