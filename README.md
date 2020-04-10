@@ -2,7 +2,7 @@
 
 Hello!!
 
-This repository contains all of the information used to perform an exploratory data analysis of the Titanic dataset from [Kaggle.com](https://www.kaggle.com). 
+This repository contains all of the information used to perform an exploratory data analysis of the Titanic dataset from [Kaggle.com](https://www.kaggle.com/c/titanic). 
 
 In this repository you will find the titanic.csv dataset file used for my analysis, as well as the jupyter notebook files with the code used to perform the analyses.
 
