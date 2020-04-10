@@ -1,0 +1,79 @@
+---
+title: "HW4 Part 2 - Titanic DataSet Analysis"
+author: "Eduardo Solano-Salgado"
+date: "10/04/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary 
+The First step in analyzing the Titanic data set is to quickly see the DataFrame and recognize the variables and type of information included. Below is the output of the first 5 rows of data in the DataFrame
+
+![Titanic Head](HW4 - Titanic-Head.png){height=80%}
+
+From the output we can observe that there are 12 different variables, with 2 possible numerical variables (Age and Fare), a primary key (PassengerId), 6 possible categorical variables (Survived, Pclass, Sex, SibSp, Parch, Embarked), and 3 string variables (Name,Ticket, Cabin). 
+
+The next step in the dataset analysis involves getting information about the different columns in the DataFrame. Below is the output of the .info() command.
+
+![Titanic Column Info](HW4 - Info.png){height=20%}
+
+From the output, we can see that there are a total of 891 data entries, with null values/missing information in the Age, Cabin, and Embarked columns.
+
+The next step was to obtain a quick statistical summary of all the different variables in the DataFrame. Below is the output of the .describe() command.
+
+![Statistical Summary](HW4 - Summary.png){height=50%}
+
+Even though the summary is not very helpful for all of the non-numerical variables, we can still deduce some basic information from the dataset. 
+
+## Survival Rate and Passenger Class
+
+The first hypothesis I wanted to test was whether there is a correlation between the class of a passenger (1st, 2nd, or 3rd) and survival. In order to get a better idea of the variables, a 2-way table was drawn from the data. The figure below shows the percentage of passengers in each Passenger Class that either died (Survived=0) or lived (Survived =1) in the Titanic.
+
+![Survival and Class 2-way Table](HW4 - Survived-Class.png){height=20%}
+
+The figure below shows the Side-by-side Bar plot of the values seen in the 2-way table, with surivival on the x axis and groups separated by passenger class. 
+
+![Side-by-Side Graph Survival vs Passenger Class](HW4 - Hypothesis1.png){height=30%}
+
+From both the 2-way table and the graph, we can observe that, although for the survival group the percentage of people from each class is almost the same (between 10 and 15%), in the group that did not survive, there is a disproportionate amount of passengers from the 3rd class. This implies that there might be a correlation between passenger class and survival rate aboard the Titanic, with a positive bias towards the upper classes. In order to test if there is a significant correlation between the variables, however, we would need to perform a Chi square analysis of the two variables and compare our statistic to a decision point. 
+
+## Survival Rate and Gender
+
+The second bivariate analysis performed, aimed at testing whether the gender of a passenger had an effect on survival. The first step towards testing this hypothesis involved creating another 2-way table, but with the percentages of men and women who survived or did not survive aboard the Titanic. The figure below shows the 2-way table for gender and survival
+
+![Survival vs Gender 2-Way Table](HW4 - Survived-Gender.png){height=20%}
+
+The figure below shows the side-by-side graph of the two variables in the dataset.
+
+![Survival vs Gender Side-by-side Graph](HW4 - Hypothesis2.png){height=30%}
+
+From the graph and the 2-way table we can clearly see a correlation between gender and survival aboard the Titanic. We can observe a significantly higher amount of males in the did not survive group and a higher amount of females in the survived group. This implies that gender and survival have a significant correlation among the passangers of the Titanic. Furthermore, this goes with the belief that women and children are generally the first ones to be rescued in a shipwreck. However, just like with the previous hypothesis, the conclusion can only be final once a more complex statistical analysis is performed (such as a Chi square analysis).
+
+## Survival Rate and Age
+Finally, I wanted to see if age had any factor in deciding whether a passenger survived or not aboard the Titanic. Since Age is a numerical variable, the first step in performing the analysis of the dataset was to take a look at the distribution of the variable among all passengers. The figure below shows the histogram of the Age variable in the dataset.
+
+![Histogram of Age](HW4 - Age Histogram.png){height=30%}
+
+From the histogram we can see that age has an approximately normal distribution among the passengers in the Titanic, with a peak centered at around 30. There is also quite a large percentage of young children, as evidenced by a proportion of almost 15% in the first age bin. 
+The next step was to take a look at the age distribution and the statistics of passenger age for each survival category. The figure below shows the .describe() command output of the dataset grouped by their survival categories.
+
+![Survival vs Age Statistical Summary](HW4 - Survived-Age.png){height=30%}
+
+The figure below shows the barplot of the two variables, with survival on the x axis and average Age on the y axis.
+
+
+![Survival vs Age Barplot](HW4 - Hypothesis3 Barplot.png){height=40%}
+
+From both the statistical summary table and the barplot, we can see that the average age of the passengers in both survival groups was very simmilar, with the survived group being slightly younger than the did not survive group. Additionally, we can see that for both survival groups, the median age was the same (28) and the standard deviation of the values was very simmilar. To get a better idea of the distribution of age between the 2 survival groups, I compared the histogram of the age variable for each survival group (see figure below).
+
+![Age Dsitribution Between Survival Groups](HW4 - Hypothesis3 Age_Comparison.png){height=50%}
+
+From the graphs we can observe that the distribution of age was very simmilar between the survived and did not survive groups. The only major difference, is the larger amount of young children present in the survived group. This also confirms the belief that children are given priority in rescue during a shipwreck. 
+
+We can observe that, although young children survived at a higher proportion that the other age groups, age is not significantly related to survival for the majority of age values. Further statistical analyses are needed to understand how age impacted survival rate aboard the Titanic. 
+
+
+
